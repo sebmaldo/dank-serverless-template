@@ -1,0 +1,15 @@
+{
+  "name": "growth-serverless-mercado-publico",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handler.js",
+  "scripts": {
+    "test": "ava test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git-codecommit.us-east-1.amazonaws.com/v1/repos/growth-serverless-mercado-publico"
+  },
+  "author": "Dank",
+  "license": "UNLICENSED"
+}
