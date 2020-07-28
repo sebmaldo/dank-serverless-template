@@ -1,0 +1,28 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "node": "12.18"
+        }
+      }
+    ]
+  ],
+  "env": {
+    "build": {
+      "plugins": [ 
+        "@babel/plugin-proposal-class-properties",
+        ["transform-es2015-modules-commonjs", {
+          "strict": true
+        }]
+      ]
+    },
+    "test": {
+      "plugins": [
+        "@babel/plugin-proposal-class-properties",
+        "rewire"
+      ]
+    }
+  }
+}

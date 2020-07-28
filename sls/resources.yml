@@ -1,0 +1,2 @@
+ExampleRole:
+  ${file(./sls/roles/example.role.yml)}

@@ -1,0 +1,4 @@
+handler: src/example/handler.example
+role: ExampleRole
+environment:
+  STAGE: ${self:provider.stage}

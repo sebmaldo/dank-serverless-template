@@ -1,0 +1,12 @@
+PolicyName: CrudExampleBucketPolicy
+PolicyDocument:
+  Version: '2012-10-17'
+  Statement:
+    -
+      Effect: "Allow"
+      Action:
+        - s3:*
+      Resource:
+        - "arn:aws:s3:::some-bucket-name"
+        - "arn:aws:s3:::some-bucket-name/*"
+# Listado de accesos s3 https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazons3.html

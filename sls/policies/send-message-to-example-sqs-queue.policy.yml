@@ -1,0 +1,11 @@
+PolicyName: SendMessageExampleQueuePolicy
+PolicyDocument:
+  Version: "2012-10-17"
+  Statement:
+    -
+      Effect: "Allow"
+      Action:
+        - sqs:SendMessage
+      Resource:
+        - arn:aws:sqs:${self:provider.region}:${self:custom.accountId}:some-sqs-name
+#List of actions of sqs https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonsqs.html
