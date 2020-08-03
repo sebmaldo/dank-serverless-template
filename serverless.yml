@@ -25,41 +25,8 @@ package:
   - .serverless/**
   - .env
 
-custom:
-  webpack:
-    webpackConfig: ./webpack.config.js
-    includeModules: true
-  environment:
-    stage:
-      dev: DEV
-      sandbox: SANDBOX
-      prod: PROD
-    stageLowercase:
-      dev: dev
-      sandbox: sandbox
-      prod: prod
-    config:
-      dev:
-        region: 530465772375
-      sandbox:
-        region: 530465772375
-      prod:
-        region: 530465772375
-  region: ${opt:region, self:provider.region}
-  accountId: ${self:custom.environment.config.${self:provider.stage}.region}
-
-# you can define service wide environment variables here
-#  environment:
-#    variable1: value1
-
-# you can add packaging information here
-#package:
-#  include:
-#    - include-me.js
-#    - include-me-dir/**
-#  exclude:
-#    - exclude-me.js
-#    - exclude-me-dir/**
+#File to define variables
+custom: ${file(./sls/custom.yml)}
 
 functions: ${file(./sls/functions.yml)}
 
