@@ -7,5 +7,5 @@ PolicyDocument:
       Action:
         - sqs:SendMessage
       Resource:
-        - arn:aws:sqs:${self:provider.region}:${self:custom.accountId}:some-sqs-name
+        - arn:aws:sqs:${self:provider.region}:#{AWS::AccountId}:some-sqs-name
 #List of actions of sqs https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonsqs.html

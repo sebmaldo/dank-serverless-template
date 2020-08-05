@@ -8,5 +8,5 @@ PolicyDocument:
       Action:
         - SNS:Publish
       Resource:
-        - arn:aws:sns:${self:custom.region}:${self:custom.accountId}:some-sns-name
+        - arn:aws:sns:${self:custom.region}:#{AWS::AccountId}:some-sns-name
 #List of SNS actions https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonsns.html

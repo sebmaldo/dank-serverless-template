@@ -10,14 +10,7 @@ environment:
     dev: dev
     sandbox: sandbox
     prod: prod
-  config:
-    dev:
-      region: 530465772375
-    sandbox:
-      region: 530465772375
-    prod:
-      region: 530465772375
 region: ${opt:region, self:provider.region}
 stage: ${self:custom.environment.stage.${self:option.stage}}
 project: ${self:serviceName} #you can custom the project name. For example for mercado-publico-severless you can set a shorter name like mp-sls
-accountId: ${self:custom.environment.config.${self:provider.stage}.region}
+ 
