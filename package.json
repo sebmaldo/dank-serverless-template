@@ -4,7 +4,7 @@
   "description": "",
   "main": "handler.js",
   "scripts": {
-    "test": "export BABEL_ENV=test && export AWS_REGION=us-east-1 && ava test",
+    "test": "export BABEL_ENV=test && export AWS_REGION=us-east-1 && ava",
     "sls-dev": "export BABEL_ENV=build && sls deploy --stage dev",
     "sls-sandbox": "export BABEL_ENV=build && sls deploy --stage sandbox",
     "sls-prod": "export BABEL_ENV=build && sls deploy --stage prod"
